@@ -4,7 +4,7 @@ const TaskList = () => {
   const [tasks, setTasks] = useState([]);
 
   useEffect(() => {
-    const unsubscribe = firestore.collection('tasks').onSnapshot(snapshot => {
+    const data = firestore.collection('tasks').onSnapshot(snapshot => {
       const tlist = snapshot.docs.map(doc => ({
         id: doc.id,
         ...doc.data(),
@@ -12,7 +12,7 @@ const TaskList = () => {
       setTasks(tlist);
     });
 
-    return () => unsubscribe();
+    return () => data();
   }, []); 
 
   return (

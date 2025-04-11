@@ -1,0 +1,27 @@
+
+header {
+    background-color:wheat;
+    color: #aa3535;
+    padding: 1rem;
+  }
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 0.4rem;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  nav a {
+    color: rgb(139, 67, 67);
+    text-decoration: none;
+  }
+  
+  
+  footer {
+    background-color: #f7dbdb;
+    width: 100%;
+    text-align: center;
+   
+  }
+  
